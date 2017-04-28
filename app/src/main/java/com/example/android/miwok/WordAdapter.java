@@ -13,23 +13,18 @@ import java.util.ArrayList;
  * Created by Natalka on 2017-03-28.
  */
 
-public class WordAdapter extends ArrayAdapter {
+public class WordAdapter extends ArrayAdapter<Word> {
 
     public WordAdapter(Context context, ArrayList<Word> pWords) {
-        super(context,0, pWords);
+        super(context, 0, pWords);
     }
-
-
-
-
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
 
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
