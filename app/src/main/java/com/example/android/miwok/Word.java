@@ -17,7 +17,7 @@ package com.example.android.miwok;
 
 /**
  * {@link Word} represents a vocabulary word that the user wants to learn.
- * It contains a default translation and a Miwok translation for that word.
+ * It contains a default translation, a Miwok translation, and an image for that word.
  */
 public class Word {
 
@@ -32,6 +32,11 @@ public class Word {
     private String mMiwokTranslation;
 
     /**
+     * Image resource ID for the word
+     */
+    private int mImageResourceId;
+
+    /**
      * Create a new Word object.
      *
      * @param defaultTranslation is the word in a language that the user is already familiar with
@@ -41,6 +46,12 @@ public class Word {
     public Word(String defaultTranslation, String miwokTranslation) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+    }
+
+    public Word(String mDefaultTranslation, String mMiwokTranslation, int mImageResourceId) {
+        this.mDefaultTranslation = mDefaultTranslation;
+        this.mMiwokTranslation = mMiwokTranslation;
+        this.mImageResourceId = mImageResourceId;
     }
 
     /**
@@ -57,4 +68,10 @@ public class Word {
         return mMiwokTranslation;
     }
 
+    /**
+     * Return the image resource ID of the word.
+     */
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
 }
