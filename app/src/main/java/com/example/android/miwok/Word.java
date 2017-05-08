@@ -30,7 +30,7 @@ public class Word {
      * Miwok translation for the word
      */
     private String mMiwokTranslation;
-
+    
     /**
      * Image resource ID for the word
      */
