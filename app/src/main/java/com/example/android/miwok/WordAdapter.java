@@ -32,7 +32,6 @@ import java.util.ArrayList;
  */
 public class WordAdapter extends ArrayAdapter<Word> {
 
-
     private int mColorResourceId;
 
     /**
